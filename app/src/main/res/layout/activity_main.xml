@@ -6,10 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Parent RelativeLayout for the entire layout -->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
+        <!-- First TextView for the title of the app -->
 
         <TextView
             android:id="@+id/titleText"
@@ -30,6 +33,7 @@
             android:numColumns="3"
             android:verticalSpacing="2dp"
             />
+        <!-- Intermediate TextView for a section label -->
 
 
         <TextView
@@ -53,8 +57,8 @@
             android:orientation="vertical"
             android:padding="16dp"
             android:visibility="visible">
-            <!-- Other views inside the selectedBooksLayout -->
         </LinearLayout>
+        <!-- TextView for displaying the total cost of selected books -->
 
         <TextView
             android:id="@+id/totalCostTextView"

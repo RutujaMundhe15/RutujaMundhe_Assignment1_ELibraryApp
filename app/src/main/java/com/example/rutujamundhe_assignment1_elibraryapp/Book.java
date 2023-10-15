@@ -1,36 +1,50 @@
 package com.example.rutujamundhe_assignment1_elibraryapp;
 
+
+/*This code defines a Book class with attributes for title, image ID, price, and a selection status.
+It provides methods to access and modify these attributes for book objects.*/
 public class Book {
 
     private String title;
-    private int imageResource;
+    private int image;
     private double price;
     private boolean isChecked;
 
-    public Book(String title, int imageResource, double price) {
+    // Constructor for making a Book object.
+    public Book(String title, int image, double price) {
         this.title = title;
-        this.imageResource = imageResource;
+        this.image = image;
         this.price = price;
         this.isChecked = false;
     }
 
-    public String getTitle() {
+    // Get the title of the book.
+    public String getTitle()
+    {
         return title;
     }
 
-    public int getImageResource() {
-        return imageResource;
+    // Get the ID of the book's picture.
+    public int getImage()
+    {
+        return image;
     }
 
-    public double getPrice() {
+    // Get the price of the book.
+    public double getPrice()
+    {
         return price;
     }
 
-    public boolean isChecked() {
+    // Check if the book is selected or not.
+    public boolean isChecked()
+    {
         return isChecked;
     }
 
-    public void setChecked(boolean checked) {
+    // Set the status.
+    public void setChecked(boolean checked)
+    {
         isChecked = checked;
     }
 }

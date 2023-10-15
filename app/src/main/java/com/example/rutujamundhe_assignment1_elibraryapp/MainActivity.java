@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements BookAdapter.OnBoo
         BookAdapter bookAdapter = new BookAdapter(this, books, this);
         bookGridView.setAdapter(bookAdapter);
 
-        // Creating a custom BookAdapter and set it for the GridView
+        // Making a custom BookAdapter and set it for the GridView
         bookGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements BookAdapter.OnBoo
         updateSelectedBooks(); // Method call if Updated
     }
 
-    //This method is created to display the selected books in another layout
+    //This technique is made to show the chose books in another format
     void updateSelectedBooks() {
         selectedBooksLayout.removeAllViews(); // Clear the layout
 
@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity implements BookAdapter.OnBoo
 
         for (Book book : books) {
             if (book.isChecked()) {
-                // Create a new view for each selected book
+                // Make another view for each chosen book
                 LinearLayout bookLayout = new LinearLayout(this);
-                bookLayout.setOrientation(LinearLayout.HORIZONTAL);
+                bookLayout.setOrientation(LinearLayout.VERTICAL);
 
                 TextView bookTitle = new TextView(this);
                 bookTitle.setText("Title: " + book.getTitle());
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements BookAdapter.OnBoo
     }
 
 
-    // Add the selected book to the list
+    // Add the chose book to the list
     void addSelectedBook(Book book) {
         book.setChecked(true);
     }
